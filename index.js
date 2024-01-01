@@ -52,13 +52,21 @@ let totalSum = 89914;
 let backers = 5007;
 let pledgeAmount;
 
+const increaseProgressBarWidth = () => {
+  const progressBar = document.querySelector(".progress-bar-background");
+  const currentWidth = parseFloat(window.getComputedStyle(progressBar).width);
+  const newWidth = currentWidth + 10;
+  progressBar.style.width = newWidth + "px";
+}
+
 const updateTotal = (amount) => {
   totalSum += amount;
   const money = document.querySelector(".money h2")
   const backersElement = document.querySelector(".backers h2");
   money.innerText = "$" + totalSum.toLocaleString("en-US");
   backers++;
-  backersElement.innerText = backers.toLocaleString("en-US")
+  backersElement.innerText = backers.toLocaleString("en-US");
+  increaseProgressBarWidth();
 } 
 
 const reward = (pledgeAmount) => {
