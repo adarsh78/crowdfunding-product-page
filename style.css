@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+*, *::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+}
+
+/* body{
+
+} */
+
+.main-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero-img {
+    background: url("./images/image-hero-mobile.jpg") no-repeat;
+    background-size: contain;
+    width: 370px;
+    height: 300px;
+    padding: 33px 24px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    background: url("./images//logo.svg") no-repeat;
+    width: 150px;
+    height: 50px;
+}
+
+.menu {
+    width: 20px;
+    height: 20px;
+}
+
+.close-menu {
+    display: none;
+}
+
+.mobile-menu {
+    min-width: 20.1rem;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    z-index: 10;
+    display: none;
+}
+
+.mobile-menu span {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 25px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.50);
+}
+
+.mobile-menu span:hover {
+    background: hsl(0, 0%, 70%);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.mobile-menu span:nth-child(1), .mobile-menu span:nth-child(2){
+    border-bottom: 0.4px solid hsl(0, 0%, 48%);
+}
+
+.desktop_menu{
+    display: none;
+}
+
+.card {
+    width: 20rem;
+    background-color: #ffffff;
+    padding: 55px 5px 10px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.50);
+    border-radius: 10px;
+    position: absolute;
+    top: 243px;
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.card p {
+    color: hsl(0, 0%, 48%);
+    margin: 1rem 0;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.mastercraft_logo {
+    background: url("./images/logo-mastercraft.svg") no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 130px;
+    bottom: 290px;
+}
+
+.backThisProject{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 15px 35px;
+}
+
+.bookmark_div{
+    filter: red;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: hsl(176, 50%, 47%);
+    color: #ffffff;
+    width: 65%;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 3.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(176, 72%, 28%);
+}
+
+.bookmark {
+    background: url("./images/icon-bookmark.svg") no-repeat;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.card_2 {
+    margin-top: 18.5rem;
+    width: 20rem;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.60);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card_2 h2 {
+    color: #000000;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    margin-top: 1.2rem;
+}
+
+.card_2 p {
+    color: hsl(0, 0%, 48%);
+    line-height: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.8rem;
+}
+
+hr {
+    max-width: 5.7rem;
+    margin:  0 auto;
+    border: 0.1px solid hsl(0, 0%, 48%);
+    opacity: 0.4;
+}
+
+progress {
+    width: 100%;
+    height: 1.8rem;
+}
+
+.card_3 {
+    margin: 2rem 0;
+    width: 20rem;
+    background-color: #ffffff;
+    padding: 45px 20px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.60);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.card_3 h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    color: #000000;
+}
+
+.card_3 p {
+    color: hsl(0, 0%, 48%);
+    line-height: 1.6rem;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 1.8rem;
+}
+
+.sub-card {
+    margin-top: 2rem;
+    width: 17.5rem;
+    background-color: #ffffff;
+    padding: 25px 20px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.60);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.sub-card h4 {
+    font-size: 17px;
+    line-height: 2.5rem;
+}
+
+.sub-card h5 {
+    font-size: 17px;
+    color: hsl(176, 50%, 47%);
+    font-weight: 400;
+    margin-bottom: 1.7rem;
+}
+
+.sub-card p {
+    font-size: 14.2px;
+    line-height: 1.5rem;
+}
+
+.left {
+    display: flex;
+    gap: 8px;
+}
+
+.left p {
+    margin-top: 3px;
+}
+
+.sub-card span {
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.flex {
+    display: inline-block;
+}
+
+.flex h5 span{
+    font-size: 15px;
+    color: hsl(176, 50%, 47%);
+}
+
+.sub-card button {
+    width: 11rem;
+}
+
+.out_of_stock_card{
+    opacity: 0.5;
+}
+
+.out_of_stock_card button {
+    background-color: hsl(0, 0%, 48%);
+}
+
+.bookmark span{
+    display: none;
+}
+
+
+.modal-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-default {
+    position: absolute;
+    width: 20rem;
+    margin: 0 auto;
+    padding: 40px 30px 35px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.60);
+    border-radius: 10px;
+    top: 115px;
+    background: #ffffff;
+}
+
+.modal-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11.2px;
+    font-weight: 700;
+}
+
+.modal-default p {
+    color: hsl(0, 0%, 48%);
+    font-size: 12.2px;
+    line-height: 1.4rem;
+    margin: 1.3rem 0 0.2rem; 
+}
+
+.modal-default-sub-card {
+    padding: 35px 30px 15px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.60);
+    border-radius: 10px;
+    margin-top: 1.4rem;
+}
+
+
+.modal-sub-card-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2rem;
+}
+
+.modal-default-sub-card span {
+    color: hsl(176, 50%, 47%);
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.item-left span {
+    color: #000000;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.modal-default-sub-card-out-of-stock {
+    opacity: 0.5;
+}
+
+.modal-sub-card-top input[type=checkbox]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 50%;
+    position: relative;
+}
+
+.modal-sub-card-top input[type=checkbox]:checked::after{
+    content: "";
+    position: absolute;
+    top: 3.5px;
+    left: 3.5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: hsl(176, 50%, 47%);
+}
+
+.enter-your-pledge {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px solid hsl(0, 0%, 70%);
+    display: none;
+}
+
+.choose {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 15px 0;
+}
+
+.choose input {
+    border: 1px solid hsl(0, 0%, 70%);
+    outline: none;
+    border-radius: 40px;
+    width: 6rem;
+    padding: 0 20px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.choose button {
+    height: 3rem;
+}
+
+.thank-you-component {
+    position: absolute;
+    top: 141px;
+    left: 27px;
+    display: none;
+}
+
+.thankyou {
+    width: 20rem;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.50);
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.thankyou h2 {
+    font-size: 18px;
+}
+
+.thankyou p {
+    font-size: 12px;
+    color: hsl(0, 0%, 48%);
+    line-height: 1.2rem;
+    font-weight: 400;
+}
+
+.thankyou button {
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 20px;
+}
+
+.pledge-text h3:hover {
+    color: hsl(176, 50%, 47%);
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1440px) {
+    /* body {
+      background-color: lightgreen;
+    } */
+
+
+    .hero-img {
+        background: url("./images/image-hero-desktop.jpg") no-repeat;
+        background-size: auto;
+        width: 100%;
+        height: 500px;
+        padding: 50px 165px;
+    }
+
+    .menu {
+         display: none;
+    } 
+    
+    .desktop_menu{
+        display: flex;
+        gap: 40px;
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 45rem;
+    }
+
+    .card h1 {
+        font-size: 1.750rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .mastercraft_logo {
+        left: 321px;
+        bottom: 241px;
+    }
+
+    button {
+        width: 13rem;
+    }
+
+    .backThisProject {
+        justify-content: space-between;
+        padding: 15px 35px 35px
+    }
+
+    .bookmark_div{
+        display: flex;
+        width: 11rem;
+        height: 3.6rem;
+        background: hsl(0, 0%, 48%);
+        border-radius: 40px;
+        opacity: 0.2;
+        position: relative;
+    }
+
+    .bookmark {
+        position: absolute;
+       right: 155px;
+    }
+
+    .bookmark span {
+        display: block;
+        padding: 16px 0 0 70px;
+        font-size: 18px;
+        font-weight: 700;
+        opacity: 0.6;
+    }
+
+
+    .card_2 {
+        margin-top: 3rem;
+        width: 45rem;
+    }
+
+    .card_2_flex {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    hr {
+        height: 4rem;
+        margin: 0;
+    }
+
+    progress {
+        margin-bottom: 2rem;
+        width: 95%;
+    }
+
+    .card_3 {
+        width: 45rem;
+        padding: 45px 40px;   
+    }
+
+    .card_3 h3 {
+        font-size: 1.3rem;
+    }
+
+    .card_3 p {
+        font-size: 16px;
+    }
+
+    .sub-card {
+        width: 40rem;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sub-card h4 {
+        font-size: 18px;
+    }
+
+    .sub-card p{
+        font-size: 17px;
+    }
+
+    .sub-card span {
+        font-size: 2rem;
+    }
+
+    .left p {
+        margin-top: 8px;
+    }
+
+    .modal-default {
+        width: 45rem;
+        padding: 50px 45px 35px;
+        top: 184px;
+    }
+
+    .modal-heading {
+        font-size: 15px;
+    }
+    
+    .modal-default p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .item-left span {
+        margin-bottom: 25px;
+        font-size: 20px;
+        margin-left: 30px;
+    }
+    
+    .modal-default-sub-card h3 {
+        font-size: 18px;
+    }
+
+    .modal-default-sub-card p{
+        font-size: 15px;
+        margin-left: 35px;
+    }
+
+    .enter-your-pledge {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+    }
+
+    .enter-your-pledge button{
+        width: 7rem;
+    }
+
+    .pledge-text{
+        display: flex;
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .thank-you-component {
+        top: 400px;
+        left: 450px;
+    }
+
+    .thankyou {
+        width: 34rem;
+    }
+
+    .thankyou h2 {
+        font-size: 20px;
+    }
+    
+    .thankyou p {
+        font-size: 16.3px;
+        color: hsl(0, 0%, 48%);
+        line-height: 1.7rem;
+        font-weight: 400;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+  }
